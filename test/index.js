@@ -33,6 +33,12 @@ describe("supertestAsPromised", function () {
     });
   });
 
+  describe("Test constructor", function () {
+    it("should be passed through from supertest", function () {
+      return expect(supertestAsPromised.Test).to.equal(supertest.Test);
+    });
+  });
+
   describe("TestAgent instances", function () {
     var agent = supertestAsPromised.agent(server);
 
