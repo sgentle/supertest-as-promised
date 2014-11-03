@@ -32,6 +32,8 @@ module.exports = function () {
   return wrap(request);
 };
 
+module.exports.Test = supertest.Test;
+
 module.exports.agent = function () {
   var agent = supertest.agent.apply(null, arguments);
   return wrap(agent);
